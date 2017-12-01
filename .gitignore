@@ -9,7 +9,7 @@
 /.vs/
 
 # Rider
-/.idea/*
+/.idea/*.*
 *.csproj
 *.sln
 
