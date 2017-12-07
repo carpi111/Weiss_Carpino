@@ -8,9 +8,12 @@ public class Spawner : MonoBehaviour {
 	public int ValidYMin;
 	public int ValidYMax;
 
+	public int MinSpawnRate;
+	public int MaxSpawnRate;
+
 	public int SecondsBetweenSpawns;
 
-	public GameObject GemToSpawn;
+	public GameObject ItemToSpawn;
 
 	void Start () {
 		InvokeRepeating("StartSpawning", 0f, SecondsBetweenSpawns);
@@ -20,13 +23,13 @@ public class Spawner : MonoBehaviour {
 	}
 
 	private void StartSpawning() {
-		Spawn(GemToSpawn);
+		Spawn(ItemToSpawn);
 	}
 
 	private void Spawn(GameObject obj) {
 		Instantiate(
 			obj,
-			new Vector2(Random.Range(ValidXMin, ValidXMax), Random.Range(ValidYMin, ValidYMax)),
+			new Vector3(Random.Range(ValidXMin, ValidXMax), Random.Range(ValidYMin, ValidYMax), -1),
 			Quaternion.identity
 		);
 	}
@@ -34,6 +37,6 @@ public class Spawner : MonoBehaviour {
 	IEnumerator StartSpawning(float val) {
 		yield return new WaitForSeconds(val);
 
-		Spawn(GemToSpawn);
+		Spawn(ItemToSpawn);
 	}
 }

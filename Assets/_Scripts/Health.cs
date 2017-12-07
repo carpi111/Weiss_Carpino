@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
 
 public class Health : MonoBehaviour {
-    [SerializeField]
-    private int currentHealth;
 
-    public void doDamage(int val) {
-        currentHealth -= val;
+	public float HP;
 
-        if (currentHealth <= 0) {
-            Destroy(gameObject);
-        }
-    }
+	public void DoDamage(float val) {
+		HP -= val;
+	}
 
+	public float GetHealth() {
+		return HP;
+	}
 }
