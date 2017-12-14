@@ -4,8 +4,10 @@ public class Shoot : MonoBehaviour {
 
 	public float Cooldown;
 	public GameObject Bullet;
+	public float RaycastDist;
 
-	private float CooldownCounter;
+	protected float CooldownCounter;
+//	private int ShotsFiredThisPulse;
 
 	void Start () {
 		CooldownCounter = Cooldown;
@@ -16,10 +18,10 @@ public class Shoot : MonoBehaviour {
 			CooldownCounter -= Time.deltaTime;
 		} else {
 			RaycastHit hit;
-			if (Physics.Raycast(transform.position, Vector3.right, out hit, 20)) {
+			if (Physics.Raycast(transform.position, Vector3.right, out hit, RaycastDist - transform.position.x)) {
 				if (hit.transform.CompareTag("Enemy")) {
 					CooldownCounter = Cooldown;
-					Instantiate(Bullet, transform.position, Quaternion.identity);
+                    Instantiate(Bullet, transform.position + Bullet.transform.position, Bullet.transform.rotation);
 				}
 			}
 		}

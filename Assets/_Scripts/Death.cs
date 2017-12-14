@@ -3,11 +3,14 @@
 public class Death : MonoBehaviour {
 
 	public bool IsPlayerUnit;
+	public int Value;
 
 	private Health HealthObj;
+	private GameManager GM;
 
 	void Start () {
 		HealthObj = GetComponent<Health>();
+		GM = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
 	}
 
 	void Update () {
@@ -15,7 +18,7 @@ public class Death : MonoBehaviour {
 			if (IsPlayerUnit) {
 				Destroy(gameObject);
 			} else {
-				// GIVE RESOURCES
+				GM.ChangeGems(Value);
 				Destroy(gameObject);
 			}
 		}

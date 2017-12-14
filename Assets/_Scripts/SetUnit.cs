@@ -28,9 +28,15 @@ public class SetUnit : MonoBehaviour {
 			TileTaken TakenObj = Tile.GetComponent<TileTaken>();
 			if (!TakenObj.IsTaken && GM.GetGems() >= Prices[Selected]) {
 				GM.ChangeGems(-Prices[Selected]);
-				Vector3 pos = new Vector3(Tile.transform.position.x, Tile.transform.position.y, -1f);
+				Vector3 pos = new Vector3(Tile.transform.position.x + AllUnits[Selected].transform.position.x, Tile.transform.position.y + AllUnits[Selected].transform.position.y, -1f);
 				TakenObj.CurrentUnit = Instantiate(AllUnits[Selected], pos, Quaternion.identity);
 				TakenObj.IsTaken = true;
+			}
+		}
+
+		if (Input.GetKeyDown(KeyCode.T)) {
+			if (++Selected == AllUnits.Length) {
+				Selected = 0;
 			}
 		}
 	}

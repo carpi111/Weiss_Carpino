@@ -13,7 +13,7 @@ public class Projectile : MonoBehaviour {
 		InitPos = transform.position;
 	}
 
-	private void Update() {
+	protected void Update() {
 		transform.Translate(MoveDirection * MoveSpeed * Time.deltaTime);
 
 		if (Vector3.Distance(transform.position, InitPos) > DestroyDistance) {
@@ -21,11 +21,11 @@ public class Projectile : MonoBehaviour {
 		}
 	}
 
-	private void OnTriggerEnter(Collider other) {
-		if (other.CompareTag("Enemy")) {
-			other.GetComponent<Health>().DoDamage(Damage);
-			// CREATE EXPLOSION EFFECT
-			Destroy(gameObject);
-		}
-	}
+//	protected void OnTriggerEnter(Collider other) {
+//		if (other.CompareTag("Enemy")) {
+//			other.GetComponent<Health>().DoDamage(Damage);
+//			// CREATE EXPLOSION EFFECT
+//			Destroy(gameObject);
+//		}
+//	}
 }
