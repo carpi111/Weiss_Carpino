@@ -1,4 +1,12 @@
-﻿using UnityEngine;
+﻿// Vince Carpino
+// 2260921
+// carpi111@mail.chapman.edu
+// CPSC 229-01 Unity Programming and Prototyping
+// Final Project
+
+// Manages the unit's health.
+
+using UnityEngine;
 
 public class Health : MonoBehaviour {
 

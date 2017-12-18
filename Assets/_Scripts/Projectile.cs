@@ -1,4 +1,12 @@
-﻿using UnityEngine;
+﻿// Vince Carpino
+// 2260921
+// carpi111@mail.chapman.edu
+// CPSC 229-01 Unity Programming and Prototyping
+// Final Project
+
+// Basic projectile script for unit bullets.
+
+using UnityEngine;
 
 public class Projectile : MonoBehaviour {
 
@@ -21,11 +29,11 @@ public class Projectile : MonoBehaviour {
 		}
 	}
 
-//	protected void OnTriggerEnter(Collider other) {
-//		if (other.CompareTag("Enemy")) {
-//			other.GetComponent<Health>().DoDamage(Damage);
-//			// CREATE EXPLOSION EFFECT
-//			Destroy(gameObject);
-//		}
-//	}
+	protected void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("Enemy"))
+        {
+            other.GetComponent<Health>().DoDamage(Damage);
+            Destroy(gameObject);
+        }
+	}
 }

@@ -1,4 +1,12 @@
-﻿using UnityEngine;
+﻿// Vince Carpino
+// 2260921
+// carpi111@mail.chapman.edu
+// CPSC 229-01 Unity Programming and Prototyping
+// Final Project
+
+// When placed on an object, moves at a constant rate in set direction.
+
+using UnityEngine;
 
 public class ConstantMovement : MonoBehaviour {
 

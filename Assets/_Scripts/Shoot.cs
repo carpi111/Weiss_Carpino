@@ -1,4 +1,12 @@
-﻿using UnityEngine;
+﻿// Vince Carpino
+// 2260921
+// carpi111@mail.chapman.edu
+// CPSC 229-01 Unity Programming and Prototyping
+// Final Project
+
+// Basic shoot ability for units.
+
+using UnityEngine;
 
 public class Shoot : MonoBehaviour {
 
@@ -7,7 +15,6 @@ public class Shoot : MonoBehaviour {
 	public float RaycastDist;
 
 	protected float CooldownCounter;
-//	private int ShotsFiredThisPulse;
 
 	void Start () {
 		CooldownCounter = Cooldown;

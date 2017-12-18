@@ -88,6 +88,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyDistance: 12
+  OneEnemy: 0
+  MaxEnemiesToKill: 10
 --- !u!114 &114156403405486976
 MonoBehaviour:
   m_ObjectHideFlags: 1

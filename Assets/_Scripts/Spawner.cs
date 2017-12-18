@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿// Vince Carpino
+// 2260921
+// carpi111@mail.chapman.edu
+// CPSC 229-01 Unity Programming and Prototyping
+// Final Project
+
+// Manages spawning fo items, including gems and enemies.
+
+using System.Collections;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour {

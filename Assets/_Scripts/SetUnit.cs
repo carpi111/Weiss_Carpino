@@ -1,4 +1,12 @@
-﻿using UnityEngine;
+﻿// Vince Carpino
+// 2260921
+// carpi111@mail.chapman.edu
+// CPSC 229-01 Unity Programming and Prototyping
+// Final Project
+
+// Manages which unit is selected and where to place it.
+
+using UnityEngine;
 
 public class SetUnit : MonoBehaviour {
 
@@ -14,6 +22,8 @@ public class SetUnit : MonoBehaviour {
 	}
 
 	void Update () {
+		Selected = GM.GetSelectedUnit();
+
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hit;
 		if (Physics.Raycast(ray, out hit, 20)) {
@@ -31,12 +41,6 @@ public class SetUnit : MonoBehaviour {
 				Vector3 pos = new Vector3(Tile.transform.position.x + AllUnits[Selected].transform.position.x, Tile.transform.position.y + AllUnits[Selected].transform.position.y, -1f);
 				TakenObj.CurrentUnit = Instantiate(AllUnits[Selected], pos, Quaternion.identity);
 				TakenObj.IsTaken = true;
-			}
-		}
-
-		if (Input.GetKeyDown(KeyCode.T)) {
-			if (++Selected == AllUnits.Length) {
-				Selected = 0;
 			}
 		}
 	}

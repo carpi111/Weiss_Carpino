@@ -1,4 +1,12 @@
-﻿using UnityEngine;
+﻿// Vince Carpino
+// 2260921
+// carpi111@mail.chapman.edu
+// CPSC 229-01 Unity Programming and Prototyping
+// Final Project
+
+// Manages what happens when a unit dies.
+
+using UnityEngine;
 
 public class Death : MonoBehaviour {
 

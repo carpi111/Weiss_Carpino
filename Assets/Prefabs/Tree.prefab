@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fc27a3ac47db4569909c0d8bd3fa9af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cooldown: 0.75
+  Cooldown: 0.5
   Bullet: {fileID: 1438704951153974, guid: 5ce1851fe84d040b7a4a66ca99643058, type: 2}
   RaycastDist: 9.75
 --- !u!114 &114863177627383164
@@ -122,7 +122,6 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -138,7 +137,6 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
